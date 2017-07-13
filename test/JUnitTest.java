@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -11,12 +16,12 @@ import paintcostestimator.PaintCostEstimator;
  *
  * @author MANOJ
  */
-public class Testing {
+public class JUnitTest {
     PaintCostEstimator test;
-    
-    public Testing() {
+    public JUnitTest() {
     }
-        
+    
+   
     @Before
     public void setUp() {
         test=new PaintCostEstimator();
@@ -26,12 +31,10 @@ public class Testing {
     public void tearDown() {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    @Test
-    public void input() {
-        assertEquals(1, test) ;
-
-    }
+    
+     @Test
+     public void testNo_of_rooms() {
+         test.No_of_rooms=4;
+         assertEquals(4, test.NoOfRooms());
+     }
 }

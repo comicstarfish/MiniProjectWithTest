@@ -31,6 +31,7 @@ public class Testing {
     //
     @Test
     public void input() {
-    
+        assertEquals(1, test) ;
+
     }
 }

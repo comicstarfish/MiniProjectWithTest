@@ -3,15 +3,20 @@ package paintcostestimator;
 import java.util.Scanner;
 
 /**
- *
+ * PROGRAM TO ESTIMATE THE COST OF PAINTING A HOUSE
+ * THE COST INCLUDES:
+ * 1.LABOUR COST/SQ.FT
+ * 2.COST OF MATERIALS/SQ.FT
  * @author MANOJ
  */
-public class PaintCostEstimator {
+
+//CLASS TO READ DATA
+ public class PaintCostEstimator {
 
     /**
      * @param args the command line arguments
      */
-    private static final int MAX_SIZE = 10;
+    private static final int MAX_SIZE = 10;  //SIMILAR TO #DEFINE MAXSIZE 10 IN C/C++
     int No_of_rooms = 0;
     double[] length = new double[MAX_SIZE];
     double[] width = new double[MAX_SIZE];
@@ -19,6 +24,7 @@ public class PaintCostEstimator {
     char option;
     Scanner read = new Scanner(System.in);
 
+    //CONSTRUCTOR TO READ THE DEATAILS OF N ROOMS
     public PaintCostEstimator() {
         System.out.print("Enter No. Of Rooms: ");
         No_of_rooms = read.nextInt();
@@ -35,18 +41,18 @@ public class PaintCostEstimator {
 
     }
 
-    public void display() {
-        for (int index = 1; index <= No_of_rooms; index++) {
-            System.out.println(length[index]);
-            System.out.println(width[index]);
-            System.out.println(option);
-        }
-    }
+   //CLASS TO COMPUTE DATA
+   public class Calculations extends PaintCostEstimator{
+       int labourCost=0;
+       int BasicPaint=0;
+       int PremiumPaint=0;
+       
+   }
 
     public static void main(String[] args) {
 
         PaintCostEstimator Estimate = new PaintCostEstimator();
-        Estimate.display();
+        
     }
 
 }
